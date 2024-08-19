@@ -50,20 +50,20 @@ class AudioAdapter(private val audioList: List<File>) :
                 }
             }
 
-            Thread {
-                while (mediaPlayer?.isPlaying == true) {
-                    mediaPlayer?.let {
-                        if (it.isPlaying) {
-                            binding.soundProgress.progress = it.currentPosition
-                        }
-                    }
-                    try {
-                        Thread.sleep(100)
-                    } catch (e: InterruptedException) {
-                        e.printStackTrace()
-                    }
-                }
-            }.start()
+//            Thread {
+//                while (mediaPlayer?.isPlaying == true) {
+//                    mediaPlayer?.let {
+//                        if (it.isPlaying) {
+//                            binding.soundProgress.progress = it.currentPosition
+//                        }
+//                    }
+//                    try {
+//                        Thread.sleep(100)
+//                    } catch (e: InterruptedException) {
+//                        e.printStackTrace()
+//                    }
+//                }
+//            }.start()
         }
 
 

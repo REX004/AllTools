@@ -5,4 +5,8 @@
     <string name="menu_home">home</string>
     <string name="menu_settings">settings</string>
     <string name="menu_news">news</string>
+    <string name="dialog_description">Lorem ipsum dolor sit amet, consectetur \nadipiscing elit. Donec luctus metus at eleifend \nporttitor. Sed et urna ut nulla condimentum \nlaoreet.</string>
+    <string name="ok">Ok</string>
+    <string name="error">Error</string>
+
 </resources>

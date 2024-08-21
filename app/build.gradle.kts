@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("kotlin-kapt")
 }
 
 android {
@@ -51,6 +52,10 @@ android {
     }
 }
 
+val daggerVersion = "2.36"
+val dagger = "com.google.dagger:dagger:$daggerVersion"
+val daggerCompiler = "com.google.dagger:dagger-compiler:$daggerVersion"
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -70,6 +75,9 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+
+    implementation(dagger)
+    kapt(daggerCompiler)
     implementation("io.getstream:stream-chat-android-ui-components:6.4.3")
     implementation("io.getstream:stream-chat-android-offline:6.4.3")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
@@ -80,6 +88,10 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+
+
+
 
 
 }
